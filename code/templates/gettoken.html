@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Proofchain{% endblock %}
+{% block content %}
+{{super()}}
+<div class="index content">
+  <form action="/gettoken1" method="POST" enctype="multipart/form-data">
+    <label for="domain">Domain</label>
+    <input required  type="text" name="domain" id="domain">
+  <button type="submit">Get Token</button>
+  </form>
+</div>
+{% endblock %}

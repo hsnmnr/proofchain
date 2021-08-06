@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Register{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content">
+  <form action="/getcert1" method="POST" enctype="multipart/form-data">
+    <label for="name">Domain CN:</label>
+    <input required type="text" name="name" id="name">
+    <button type="submit" value="Upload">Request</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Register{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content">
+  <p>Hit the button to validate the token.</p>
+  <form action="/validate1" method="POST"  enctype="multipart/form-data">
+    <label for="token">Token</label><input  required name="token" type="file" >
+    <label for="issued">Issued Token</label><input  required type="file" name="issued">
+    <label for="crt">CRT</label><input  required type="file" name="crt">
+    <button type="submit">validate</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,8 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Welcome {{name}}{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content comm">
+  <button class="publish_token">Place Signed Token</button>
+</div>
+{% endblock %}

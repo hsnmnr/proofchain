@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Register{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content">
+  <form action="/viewrevoked1" method="POST" enctype="multipart/form-data">
+    <label for="pk">Pk</label>
+    <input type="file" name="pk" id="pk" required>
+    <button type="submit" value="Upload">View</button>
+  </form>
+</div>
+{% endblock %}

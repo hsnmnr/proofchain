@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Register{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content">
+  <p>Following requests are available. Select anyone to generate a token for it.
+  </p>
+  <div class="utps">
+    {% for tx in utp.values() %}
+    <button class="tx"><a href="{{url_for('gen_token',tx = tx.domain,status=tx.crt)}}">{{tx.domain}}</a></button>
+    {% endfor %}
+  </div>
+  <p>Following are the Domains that you can verify placed tokens of.</p>
+  <div class="utps">
+    {% for domain in usrToken.keys() %}
+    <button class="domain"><a href="{{url_for('validate2',domain=domain)}}">{{domain}}</a></button>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

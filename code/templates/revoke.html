@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Register{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content">
+  <form action="/revoke1" method="POST" enctype="multipart/form-data">
+    <label for="domain">Domain:</label>
+    <input type="text" name="domain" id="pk" required>
+    <button type="submit">Request</button>
+  </form>
+</div>
+{% endblock %}

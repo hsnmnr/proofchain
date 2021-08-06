@@ -1,0 +1,126 @@
+:root{
+  font-family: 'Montserrat Medium', Helvetica, Arial, sans-serif;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+*{
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+body{
+  height: 100vh;
+  overflow: hidden;
+  border: 1px solid black;
+}
+.ft--right{
+  float: right;
+}
+.ft--left{
+  float: left;
+}
+.nav{
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+.navbar{
+  list-style-type: none;
+  display: flex;
+  background-color: rgba(0,0,0, 0.5);
+  padding: 1em;
+}
+.navbar li.nav-link{
+  padding: 0 0.6em;
+  font-weight: bold;
+}
+.nav-link a{
+  transition: all 0.7s ease-in-out 0.2s;
+}
+.nav-link a:hover{
+  border-bottom: 1px solid white;
+}
+table{
+  border-collapse: collapse;
+}
+th{
+  font-weight: bolder;
+}
+td, th{
+  padding: 0.2em 0.5em;
+  border: 1px solid black;
+}
+h1, h3{
+  margin: 0.7em 0;
+  padding-bottom: 0.1em;
+  text-decoration: underline;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Montserrat';
+}
+.content{
+  padding: 1em;
+  margin: auto;
+  padding-top: 5em;
+  text-align: center;
+  height: 100%;
+}
+button{
+  border-radius: 0.3em;
+  padding: 0.5em 0.8em;
+  border: none;
+  background-color: rgba(0, 162, 255);
+  color: white;
+  font-weight: bold;
+  display: block;
+  width: fit-content;
+  margin: 1em auto;
+}
+label{
+  margin-bottom: 0.5em;
+}
+input{
+  margin-bottom: 1em;
+  border-radius: 0.3em;
+  padding: 0.3em 0.5em;
+  margin: 0 1em;
+}
+label::before{
+  content: "";
+  display: block;
+  margin: 1em;
+}
+.login-form{
+  background:linear-gradient(to right, rgba(255,255,255,0.8),rgba(255,255,255,0.8));
+  width: 23%;
+  padding: 1em;
+  border-radius: 1em;
+  text-align: right;
+}
+form{
+  text-align: right;
+  width: max-content;
+  margin: 0 auto;
+}
+button.danger{
+  background-color: rgb(201, 12, 12);
+}
+.content.login{
+  background:  linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0.7))center center, url('../img/login.jpg')  center center;
+  background-size: cover;
+}
+.content.index{
+  background:  linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0))center center, url('../img/home.jpg')  center center;
+  background-size: cover;
+}
+.content.user{
+  background:  linear-gradient(to bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2))center center, url('../img/user.jpg')  center center;
+  background-size: cover;
+}
+.hashval{
+  max-width: 16em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

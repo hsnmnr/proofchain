@@ -1,0 +1,33 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Proofchain{% endblock %}
+{% block content %}
+{{super()}}
+<div class="index content">
+<header>
+  <h1>Proofchain</h1>
+  <h3>A Decentralized Domain Authentication Blockchain Application</h3>
+</header>
+<table>
+  <tr>
+    <th>sr no.</th>
+    <th>Domain</th>
+    <th>Public Key</th>
+    <th>Expiry</th>
+    <th>Status</th>
+    <th>Gs</th>
+    <th>Ids</th>
+  </tr>
+  {% for block in chain %}
+  <tr>
+    <td>{{block.index}}</td>
+    <td>{{block.domain}}</td>
+    <td class="hashval">{{block.pk}}</td>
+    <td>{{block.expiry}}</td>
+    <td>{{block.crt}}</td>
+    <td class="hashval">{{block.gs.hash}}</td>
+    <td class="hashval">{{block.ids.hash}}</td>
+  </tr>
+  {% endfor %}
+</table>
+</div>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Register{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content">
+  <p>Key Binding done. Domain existence checked.</p>
+  <form action="/gen_token1" method="POST">
+    <input name="token" type="text" value={{miner._token_placement(tx)}}>
+    <input required type="text" value="{{tx.domain}}" hidden name="domain">
+    <button type="submit">Generate Token</button>
+  </form>
+</div>
+{% endblock %}

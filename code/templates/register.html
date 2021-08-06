@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Register{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content">
+  <header>
+    <h1>Welcome {{name}}</h1>
+    <h3>Please fill in the required fields to register your domain...</h3>
+  </header>
+    <form action="/createcsr/{{status}}" method="POST" class="register">
+      <label for="nodename">Domain:</label><input required type="text" name="nodename">
+      {% if status=='initial' %}
+      <label for="state">State:</label><input required type="text" name="state">
+      <label for="location">Location:</label><input required type="text" name="location">
+      <label for="organization">Organization:</label><input required type="text" name="organization">
+      <label for="orgunit">Organizational Unit:</label><input required type="text" name="orgunit">
+      <label for="email">Email:</label><input required type="text" name="email">
+      {% endif %}
+      <button type="submit">Submit:</button>
+    </form>
+</div>
+{% endblock %}

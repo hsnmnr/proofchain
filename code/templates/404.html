@@ -1,0 +1,11 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Welcome {{name}}{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content">
+<div class="msg">
+  <h1>Error 404!</h1>
+  <h3>Requested Page does not exists.</h3>
+</div>
+</div>
+{% endblock %}

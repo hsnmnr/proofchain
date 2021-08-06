@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+{% block title %}{{super()}}Register{% endblock %}
+{% block content %}
+{{super()}}
+<div class="content">
+  <p>Please Upldaod CRT. After successfully uploading the CRT
+     you can go to your domain
+    and wait for the token being issued to you.
+  </p>
+  <form action="/creatTrans" class="validate" method="POST"
+  enctype="multipart/form-data">
+    <label for="crt">CRT</label>
+    <input required  type="file" name="crt" id="crt">
+    <button type="submit" value="Upload">Submit</button>
+  </form>
+</div>
+{% endblock %}
